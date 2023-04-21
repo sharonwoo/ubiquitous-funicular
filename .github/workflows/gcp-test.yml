@@ -16,5 +16,9 @@ jobs:
       with:
         credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
 
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+
     - name: work-work
-      run:  echo "Hello World"
+      run: python test.py
